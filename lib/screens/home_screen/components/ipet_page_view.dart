@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ipet/models/notifiers/nav_b_bar/navigation_bbar_data.dart';
+import 'package:ipet/screens/dash_board_screen/dash_board_screen.dart';
 import 'package:provider/provider.dart';
 
 class IPetPageView extends StatelessWidget {
@@ -15,12 +16,12 @@ class IPetPageView extends StatelessWidget {
         children: <Widget>[
           // You just need to replace your pages with this Container
 
-          // DashBoardScreen(),
+          DashoBoardScreen(),
           // IPetCatScreen(),
           // CreateCartScreen(),
           // CartScreen(),
           // IPetSettingsScreen(),
-          Scaffold(body: Container(child: Center(child: Text("First")))),
+          // Scaffold(body: Container(child: Center(child: Text("First")))),
           Scaffold(body: Container(child: Center(child: Text("Second")))),
           Scaffold(body: Container(child: Center(child: Text("Third")))),
           Scaffold(body: Container(child: Center(child: Text("Fourth")))),
