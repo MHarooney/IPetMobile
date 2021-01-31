@@ -14,4 +14,5 @@ class IPetDimens {
   static const double space80 = 80;
   static const double space120 = 120;
   static const double space200 = 200;
+  static const double space300 = 300;
 }
