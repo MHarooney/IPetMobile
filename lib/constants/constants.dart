@@ -7,6 +7,7 @@ class AppConst {
   static const kPrimaryLightColor = Color(0xFFFFECDF);
   static const kPrimaryWhiteBgColor = Color(0xFFFFFFFF);
   static const kPrimarySemiWhiteColor = Color(0xFFF9F9F9);
+  static const kNewColor = Color(0xFFF9F9F9);
   // static const kPrimaryGradientColor = LinearGradient(
   //   begin: Alignment.topLeft,
   //   end: Alignment.bottomRight,
