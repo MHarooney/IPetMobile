@@ -92,4 +92,14 @@ class AppConst {
       offset: const Offset(0, 3), // changes position of shadow
     );
   }
+
+  static final greyBoxShadow = BoxDecoration(
+      color: AppConst.kPrimaryWhiteBgColor,
+      borderRadius: BorderRadius.circular(15),
+      boxShadow: [
+        BoxShadow(
+            color: Colors.grey.withOpacity(0.3),
+            blurRadius: 8,
+            offset: Offset(3, 1))
+      ]);
 }

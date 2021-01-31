@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ipet/constants/constants.dart';
+import 'package:ipet/widgets/my_custom_card.dart';
 
 class CustomGridViewCard extends StatelessWidget {
   final String imgScr;
@@ -20,19 +21,13 @@ class CustomGridViewCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(right: 30, bottom: 10),
-      child: Container(
-        decoration: BoxDecoration(
-            color: AppConst.kPrimaryWhiteBgColor,
-            borderRadius: BorderRadius.circular(15),
-            boxShadow: [
-              BoxShadow(
-                  color: Colors.grey.withOpacity(0.3),
-                  blurRadius: 8,
-                  offset: Offset(3, 1))
-            ]),
-        child: Container(
-          width: 280,
-          child: Column(
+      child: MyCustomCard(
+        colour: Colors.transparent,
+        ipetDecoration: AppConst.greyBoxShadow,
+        childCard: MyCustomCard(
+          colour: null,
+          ipetWidth: 280,
+          childCard: Column(
             children: <Widget>[
               Image.asset(imgScr),
               Padding(

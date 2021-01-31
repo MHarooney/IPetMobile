@@ -12,7 +12,6 @@ import 'package:ipet/widgets/ipet_default_button.dart';
 import 'package:provider/provider.dart';
 
 class BodyIntroScreen extends StatelessWidget {
-  // int currentPage = 0;
   @override
   Widget build(BuildContext context) {
     return SafeArea(

@@ -7,6 +7,9 @@ class MyCustomCard extends StatelessWidget {
     this.myOnTap,
     this.myBorderRadius,
     this.iPetBoxShadow,
+    this.ipetDecoration,
+    this.ipetWidth,
+    this.ipetHeight,
   });
 
   final Color colour;
@@ -14,19 +17,20 @@ class MyCustomCard extends StatelessWidget {
   final Function myOnTap;
   final BorderRadiusGeometry myBorderRadius;
   final List<BoxShadow> iPetBoxShadow;
+  final Decoration ipetDecoration;
+  final double ipetWidth;
+  final double ipetHeight;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: myOnTap,
       child: Container(
+        width: ipetWidth,
+        height: ipetHeight,
         child: childCard,
         margin: EdgeInsets.all(10.0),
-        decoration: BoxDecoration(
-          color: colour,
-          borderRadius: myBorderRadius,
-          boxShadow: iPetBoxShadow,
-        ),
+        decoration: ipetDecoration,
       ),
     );
   }
