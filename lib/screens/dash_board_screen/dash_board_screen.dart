@@ -7,7 +7,7 @@ class DashBoardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return IPetCustomScaffold(
-      // appBar: IPetAppBar(),
+      // iPetAppBar: IPetCustomBarWidget(),
       body: SafeArea(
           child: ListView(
         children: <Widget>[
