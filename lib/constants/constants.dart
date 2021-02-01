@@ -7,6 +7,8 @@ class AppConst {
   static const kPrimaryLightColor = Color(0xFFFFECDF);
   static const kPrimaryWhiteBgColor = Color(0xFFFFFFFF);
   static const kPrimarySemiWhiteColor = Color(0xFFF9F9F9);
+  static const kNewColor = Color(0xFFF9F9F9);
+  static const kSecondNewColor = Color(0xFFF9F9F9);
   // static const kPrimaryGradientColor = LinearGradient(
   //   begin: Alignment.topLeft,
   //   end: Alignment.bottomRight,
@@ -90,4 +92,14 @@ class AppConst {
       offset: const Offset(0, 3), // changes position of shadow
     );
   }
+
+  static final greyBoxShadow = BoxDecoration(
+      color: AppConst.kPrimaryWhiteBgColor,
+      borderRadius: BorderRadius.circular(15),
+      boxShadow: [
+        BoxShadow(
+            color: Colors.grey.withOpacity(0.3),
+            blurRadius: 8,
+            offset: Offset(3, 1))
+      ]);
 }

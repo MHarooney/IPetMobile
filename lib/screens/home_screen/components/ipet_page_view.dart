@@ -16,7 +16,7 @@ class IPetPageView extends StatelessWidget {
         children: <Widget>[
           // You just need to replace your pages with this Container
 
-          DashoBoardScreen(),
+          DashBoardScreen(),
           // IPetCatScreen(),
           // CreateCartScreen(),
           // CartScreen(),

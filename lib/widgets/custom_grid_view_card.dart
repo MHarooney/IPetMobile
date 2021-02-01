@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ipet/constants/constants.dart';
+import 'package:ipet/constants/ipet_dimens.dart';
+import 'package:ipet/widgets/default_image.dart';
+import 'package:ipet/widgets/ipet_custom_icon.dart';
+import 'package:ipet/widgets/ipet_custom_sizedbox.dart';
+import 'package:ipet/widgets/label.dart';
+import 'package:ipet/widgets/my_custom_card.dart';
 
 class CustomGridViewCard extends StatelessWidget {
   final String imgScr;
@@ -19,53 +25,47 @@ class CustomGridViewCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 30, bottom: 10),
-      child: Container(
-        decoration: BoxDecoration(
-            color: AppConst.kPrimaryWhiteBgColor,
-            borderRadius: BorderRadius.circular(15),
-            boxShadow: [
-              BoxShadow(
-                  color: Colors.grey.withOpacity(0.3),
-                  blurRadius: 8,
-                  offset: Offset(3, 1))
-            ]),
-        child: Container(
-          width: 280,
-          child: Column(
+      padding: const EdgeInsets.only(
+          right: IPetDimens.space30, bottom: IPetDimens.space30),
+      child: MyCustomCard(
+        colour: null,
+        ipetDecoration: AppConst.greyBoxShadow,
+        childCard: MyCustomCard(
+          colour: null,
+          ipetWidth: IPetDimens.space280,
+          childCard: Column(
             children: <Widget>[
-              Image.asset(imgScr),
+              DefaultImage(image: imgScr),
               Padding(
-                padding: EdgeInsets.all(18),
+                padding: EdgeInsets.all(IPetDimens.space15),
                 child: Column(
                   children: <Widget>[
-                    Text(
-                      title,
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          height: 1.5),
+                    Label(
+                      text: title,
+                      size: IPetDimens.space15,
+                      fontWeight: FontWeight.bold,
+                      height: IPetDimens.space1Point5,
                     ),
-                    SizedBox(
-                      height: 10,
+                    IPetCustomSizedBox(
+                      height: IPetDimens.space10,
                     ),
                     Row(
                       children: <Widget>[
-                        Icon(
-                          FontAwesomeIcons.mapMarkerAlt,
-                          size: 17,
+                        IPetCustomIcon(
+                          ip_size: IPetDimens.space17,
+                          ip_font_ic: FontAwesomeIcons.mapMarkedAlt,
                         ),
-                        SizedBox(
-                          width: 15,
+                        IPetCustomSizedBox(
+                          width: IPetDimens.space15,
                         ),
-                        Text(
-                          location,
+                        Label(
+                          text: location,
                           // style: contentBlack,
-                        )
+                        ),
                       ],
                     ),
-                    SizedBox(
-                      height: 10,
+                    IPetCustomSizedBox(
+                      height: IPetDimens.space10,
                     ),
                     Row(
                       children: <Widget>[
@@ -73,8 +73,8 @@ class CustomGridViewCard extends StatelessWidget {
                           FontAwesomeIcons.users,
                           size: 17,
                         ),
-                        SizedBox(
-                          width: 15,
+                        IPetCustomSizedBox(
+                          width: IPetDimens.space10,
                         ),
                         Text(
                           members,

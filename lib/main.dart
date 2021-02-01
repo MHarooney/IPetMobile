@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ipet/models/notifiers/app_bar/ipet_bar_notifer.dart';
 import 'package:ipet/models/notifiers/intro_screen/intro_screen_data.dart';
 import 'package:ipet/models/notifiers/nav_b_bar/navigation_bbar_data.dart';
 import 'package:ipet/routes.dart';
@@ -14,7 +15,9 @@ import 'screens/splash/splash_screen.dart';
 // import 'package:shop_app/screens/splash/splash_screen.dart';
 
 void main() {
-  runApp(MaterialApp(home: MyApp()));
+  runApp(MaterialApp(
+    home: MyApp(),
+  ));
 }
 
 class MyApp extends StatefulWidget {
@@ -39,6 +42,9 @@ class _MyAppState extends State<MyApp> {
                 ),
                 ChangeNotifierProvider(
                   create: (context) => NavigationBBarData(),
+                ),
+                ChangeNotifierProvider(
+                  create: (context) => IPetBarNotifier(),
                 ),
               ],
               child: MaterialApp(
