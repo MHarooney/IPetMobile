@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:ipet/widgets/common/ipet_custom_scaffold.dart';
 import 'package:ipet/widgets/custom_grid_view_card.dart';
+import 'package:ipet/widgets/ipet_custom_appbar.dart';
 
 class DashBoardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return IPetCustomScaffold(
-      // iPetAppBar: IPetCustomBarWidget(),
+      iPetAppBar: IPetCustomBarWidget(
+        child: null,
+        title: "IPet",
+        onPressed: null,
+      ),
       body: SafeArea(
           child: ListView(
         children: <Widget>[

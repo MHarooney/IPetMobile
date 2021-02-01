@@ -1,88 +1,93 @@
 import 'package:flutter/material.dart';
-import 'package:ipet/models/notifiers/app_bar/ipet_bar_notifer.dart';
-import 'package:ipet/widgets/common/ipet_custom_scaffold.dart';
-import 'package:provider/provider.dart';
 
-class IPetCustomBarWidget extends StatelessWidget {
+class IPetCustomBarWidget extends StatelessWidget
+    implements PreferredSizeWidget {
+  final String title;
+  final Widget child;
+  final Function onPressed;
+  final Function onTitleTapped;
+
+  @override
+  final Size preferredSize;
+
+  IPetCustomBarWidget(
+      {@required this.title,
+      @required this.child,
+      @required this.onPressed,
+      this.onTitleTapped})
+      : preferredSize = Size.fromHeight(60.0);
+
+  ShapeBorder kBackButtonShape = RoundedRectangleBorder(
+    borderRadius: BorderRadius.only(
+      topRight: Radius.circular(30),
+    ),
+  );
+
   @override
   Widget build(BuildContext context) {
-    return Consumer<IPetBarNotifier>(
-        builder: (context, iPetBarNotiSelector, child) {
-      return IPetCustomScaffold(
-        ipKey: IPetBarNotifier.scaffoldKey,
-        body: Container(
-          height: 160.0,
-          child: Stack(
+    return SafeArea(
+      child: Column(
+        children: <Widget>[
+          // SizedBox(height: 30,),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Container(
-                color: Colors.transparent,
-                width: MediaQuery.of(context).size.width,
-                height: 100.0,
-                child: Center(
-                  child: Text(
-                    "Home",
-                    style: TextStyle(color: Colors.white, fontSize: 18.0),
+              Hero(
+                tag: 'topBarBtn',
+                child: Card(
+                  elevation: 10,
+                  shape: kBackButtonShape,
+                  child: MaterialButton(
+                    height: 50,
+                    minWidth: 50,
+                    elevation: 10,
+                    shape: kBackButtonShape,
+                    onPressed: onPressed,
+                    child: child,
                   ),
                 ),
               ),
-              Positioned(
-                top: 80.0,
-                left: 0.0,
-                right: 0.0,
-                child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20.0),
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(1.0),
-                        border: Border.all(
-                            color: Colors.grey.withOpacity(0.5), width: 1.0),
-                        color: Colors.white),
-                    child: Row(
-                      children: [
-                        // IconButton(
-                        //   icon: Icon(
-                        //     Icons.menu,
-                        //     color: Colors.red,
-                        //   ),
-                        //   onPressed: () {
-                        //     print("your menu action here");
-                        //     IPetBarNotifier.currentState.openDrawer();
-                        //   },
-                        // ),
-                        Expanded(
-                          child: TextField(
-                            decoration: InputDecoration(
-                              hintText: "Search",
+              // SizedBox(
+              //   width: 50,
+              // ),
+              Hero(
+                tag: 'title',
+                transitionOnUserGestures: true,
+                child: Card(
+                  elevation: 10,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(30),
+                    ),
+                  ),
+                  child: InkWell(
+                    onTap: onTitleTapped,
+                    child: Container(
+                      width: MediaQuery.of(context).size.width / 1.5,
+                      height: 50,
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 30),
+                          child: Text(
+                            title,
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 25,
+                              // color: Colors.black54,
                             ),
                           ),
                         ),
-                        IconButton(
-                          icon: Icon(
-                            Icons.search,
-                            color: Colors.red,
-                          ),
-                          onPressed: () {
-                            print("your menu action here");
-                          },
-                        ),
-                        IconButton(
-                          icon: Icon(
-                            Icons.notifications,
-                            color: Colors.red,
-                          ),
-                          onPressed: () {
-                            print("your menu action here");
-                          },
-                        ),
-                      ],
+                      ),
                     ),
                   ),
                 ),
               )
             ],
           ),
-        ),
-      );
-    });
+        ],
+      ),
+    );
   }
 }

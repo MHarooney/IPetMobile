@@ -7,7 +7,7 @@ class IPetCustomScaffold extends StatelessWidget {
 
   const IPetCustomScaffold({
     @required this.body,
-    @required this.ipKey,
+    this.ipKey,
     this.iPetAppBar,
   });
 
