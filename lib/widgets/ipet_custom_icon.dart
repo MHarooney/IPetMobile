@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class IPetCustomIcon extends StatelessWidget {
-  const IPetCustomIcon({
-    Key key,
-  }) : super(key: key);
+  IPetCustomIcon({
+    @required this.ip_size,
+    @required this.ip_font_ic,
+  });
+
+  final IconData ip_font_ic;
+  final double ip_size;
 
   @override
   Widget build(BuildContext context) {
     return Icon(
-      FontAwesomeIcons.mapMarkerAlt,
-      size: 17,
+      ip_font_ic,
+      size: ip_size,
     );
   }
 }

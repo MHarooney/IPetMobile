@@ -51,18 +51,21 @@ class CustomGridViewCard extends StatelessWidget {
                     ),
                     Row(
                       children: <Widget>[
-                        IPetCustomIcon(),
-                        SizedBox(
-                          width: 15,
+                        IPetCustomIcon(
+                          ip_size: IPetDimens.space17,
+                          ip_font_ic: FontAwesomeIcons.mapMarkedAlt,
                         ),
-                        Text(
-                          location,
+                        IPetCustomSizedBox(
+                          width: IPetDimens.space15,
+                        ),
+                        Label(
+                          text: location,
                           // style: contentBlack,
-                        )
+                        ),
                       ],
                     ),
-                    SizedBox(
-                      height: 10,
+                    IPetCustomSizedBox(
+                      height: IPetDimens.space10,
                     ),
                     Row(
                       children: <Widget>[
@@ -70,8 +73,8 @@ class CustomGridViewCard extends StatelessWidget {
                           FontAwesomeIcons.users,
                           size: 17,
                         ),
-                        SizedBox(
-                          width: 15,
+                        IPetCustomSizedBox(
+                          width: IPetDimens.space10,
                         ),
                         Text(
                           members,
