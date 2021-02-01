@@ -5,6 +5,7 @@ class IPetDimens {
   static const double space10 = 10;
   static const double space12 = 12;
   static const double space15 = 15;
+  static const double space18 = 18;
   static const double space20 = 20;
   static const double space25 = 25;
   static const double space30 = 30;
@@ -15,5 +16,6 @@ class IPetDimens {
   static const double space120 = 120;
   static const double space200 = 200;
   static const double space250 = 250;
+  static const double space280 = 280;
   static const double space300 = 300;
 }
