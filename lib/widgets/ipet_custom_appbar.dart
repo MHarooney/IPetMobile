@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:ipet/widgets/default_image.dart';
+import 'package:ipet/widgets/ipet_custom_icon.dart';
+import 'package:ipet/widgets/ipet_custom_sizedbox.dart';
 
 class IPetCustomBarWidget extends StatelessWidget
     implements PreferredSizeWidget {
@@ -26,64 +30,44 @@ class IPetCustomBarWidget extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Column(
-        children: <Widget>[
-          // SizedBox(height: 30,),
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 15.0),
+            child: IPetCustomIcon(
+              ip_size: 20,
+              ip_font_ic: FontAwesomeIcons.list,
+            ),
+          ),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                DefaultImage(
+                  image: 'assets/images/ipet_paw_img.png',
+                ),
+                DefaultImage(
+                  image: 'assets/images/ipet_text_img.png',
+                ),
+              ],
+            ),
+          ),
           Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Hero(
-                tag: 'topBarBtn',
-                child: Card(
-                  elevation: 10,
-                  shape: kBackButtonShape,
-                  child: MaterialButton(
-                    height: 50,
-                    minWidth: 50,
-                    elevation: 10,
-                    shape: kBackButtonShape,
-                    onPressed: onPressed,
-                    child: child,
-                  ),
+            children: [
+              IPetCustomIcon(
+                ip_size: 20,
+                ip_font_ic: FontAwesomeIcons.search,
+              ),
+              IPetCustomSizedBox(
+                width: 15,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 15.0),
+                child: IPetCustomIcon(
+                  ip_size: 20,
+                  ip_font_ic: FontAwesomeIcons.paw,
                 ),
               ),
-              // SizedBox(
-              //   width: 50,
-              // ),
-              Hero(
-                tag: 'title',
-                transitionOnUserGestures: true,
-                child: Card(
-                  elevation: 10,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(30),
-                    ),
-                  ),
-                  child: InkWell(
-                    onTap: onTitleTapped,
-                    child: Container(
-                      width: MediaQuery.of(context).size.width / 1.5,
-                      height: 50,
-                      child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 30),
-                          child: Text(
-                            title,
-                            style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 25,
-                              // color: Colors.black54,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              )
             ],
           ),
         ],

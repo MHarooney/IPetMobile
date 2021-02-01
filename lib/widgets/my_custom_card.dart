@@ -10,6 +10,7 @@ class MyCustomCard extends StatelessWidget {
     this.ipetDecoration,
     this.ipetWidth,
     this.ipetHeight,
+    this.ipetMargin = const EdgeInsets.all(10.0),
   });
 
   final Color colour;
@@ -20,6 +21,7 @@ class MyCustomCard extends StatelessWidget {
   final Decoration ipetDecoration;
   final double ipetWidth;
   final double ipetHeight;
+  final EdgeInsetsGeometry ipetMargin;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +31,7 @@ class MyCustomCard extends StatelessWidget {
         width: ipetWidth,
         height: ipetHeight,
         child: childCard,
-        margin: EdgeInsets.all(10.0),
+        margin: ipetMargin,
         decoration: ipetDecoration,
       ),
     );
