@@ -3,6 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ipet/constants/constants.dart';
 import 'package:ipet/constants/ipet_dimens.dart';
 import 'package:ipet/widgets/default_image.dart';
+import 'package:ipet/widgets/ipet_custom_icon.dart';
+import 'package:ipet/widgets/ipet_custom_sizedbox.dart';
 import 'package:ipet/widgets/label.dart';
 import 'package:ipet/widgets/my_custom_card.dart';
 
@@ -42,17 +44,14 @@ class CustomGridViewCard extends StatelessWidget {
                       text: title,
                       size: IPetDimens.space15,
                       fontWeight: FontWeight.bold,
-                      height: 1.5,
+                      height: IPetDimens.space1Point5,
                     ),
-                    SizedBox(
-                      height: 10,
+                    IPetCustomSizedBox(
+                      height: IPetDimens.space10,
                     ),
                     Row(
                       children: <Widget>[
-                        Icon(
-                          FontAwesomeIcons.mapMarkerAlt,
-                          size: 17,
-                        ),
+                        IPetCustomIcon(),
                         SizedBox(
                           width: 15,
                         ),

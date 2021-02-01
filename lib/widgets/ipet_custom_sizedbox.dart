@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class IPetCustomSizedBox extends StatelessWidget {
-  IPetCustomSizedBox({this.height, this.width, this.iPetChild});
+  IPetCustomSizedBox({
+    this.height,
+    this.width,
+    this.iPetChild,
+  });
 
   final double height;
   final double width;

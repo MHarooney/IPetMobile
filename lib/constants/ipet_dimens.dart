@@ -1,5 +1,6 @@
 class IPetDimens {
   static const double space0Point4 = 0.4;
+  static const double space1Point5 = 1.5;
   static const double space1 = 1;
   static const double space5 = 5;
   static const double space10 = 10;
