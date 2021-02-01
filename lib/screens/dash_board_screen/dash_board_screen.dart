@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ipet/widgets/custom_grid_view_card.dart';
 
-class DashoBoardScreen extends StatelessWidget {
+class DashBoardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;

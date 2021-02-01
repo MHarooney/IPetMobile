@@ -14,7 +14,9 @@ import 'screens/splash/splash_screen.dart';
 // import 'package:shop_app/screens/splash/splash_screen.dart';
 
 void main() {
-  runApp(MaterialApp(home: MyApp()));
+  runApp(MaterialApp(
+    home: MyApp(),
+  ));
 }
 
 class MyApp extends StatefulWidget {
