@@ -22,7 +22,8 @@ class IPetPageView extends StatelessWidget {
           // CartScreen(),
           // IPetSettingsScreen(),
           // Scaffold(body: Container(child: Center(child: Text("First")))),
-          Scaffold(body: Container(child: Center(child: Text("Second")))),
+          Scaffold(
+              body: Container(child: Center(child: Text("Categories Screen")))),
           Scaffold(body: Container(child: Center(child: Text("Third")))),
           Scaffold(body: Container(child: Center(child: Text("Fourth")))),
           Scaffold(body: Container(child: Center(child: Text("Fifth")))),

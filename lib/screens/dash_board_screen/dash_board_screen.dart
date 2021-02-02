@@ -55,7 +55,7 @@ class DashBoardScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Label(
-                      text: "Walk groups".toUpperCase(),
+                      text: "Recommended".toUpperCase(),
                       size: 17,
                       fontWeight: FontWeight.bold,
                     ),
@@ -90,7 +90,44 @@ class DashBoardScreen extends StatelessWidget {
                       // WalkGroupCard()
                     ],
                   ),
-                )
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Label(
+                      text: "Walk groups".toUpperCase(),
+                      size: 17,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    Label(
+                      text: "Show more",
+                      textColor: AppConst.kPrimaryColor,
+                      size: 12,
+                    ),
+                  ],
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: <Widget>[
+                      CustomGridViewCard(
+                        imgScr: "assets/images/pet_places.png",
+                        title: "Meet our lovely dogs walking with us",
+                        location: "Cairo, Egypt",
+                        members: "8 memmbers",
+                        orgBy: "Laura",
+                      ),
+                      CustomGridViewCard(
+                        imgScr: "assets/images/pet_places.png",
+                        title: "Meet our lovely dogs walking with us",
+                        location: "Valencia, Spain",
+                        members: "8 memmbers",
+                        orgBy: "Laura",
+                      ),
+                      // WalkGroupCard()
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
