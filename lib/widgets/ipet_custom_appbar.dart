@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:ipet/constants/ipet_dimens.dart';
 import 'package:ipet/widgets/default_image.dart';
 import 'package:ipet/widgets/ipet_custom_icon.dart';
 import 'package:ipet/widgets/ipet_custom_sizedbox.dart';
@@ -19,11 +20,11 @@ class IPetCustomBarWidget extends StatelessWidget
       @required this.child,
       @required this.onPressed,
       this.onTitleTapped})
-      : preferredSize = Size.fromHeight(60.0);
+      : preferredSize = Size.fromHeight(IPetDimens.space60);
 
   ShapeBorder kBackButtonShape = RoundedRectangleBorder(
     borderRadius: BorderRadius.only(
-      topRight: Radius.circular(30),
+      topRight: Radius.circular(IPetDimens.space30),
     ),
   );
 
@@ -33,9 +34,9 @@ class IPetCustomBarWidget extends StatelessWidget
       child: Row(
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 15.0),
+            padding: const EdgeInsets.only(left: IPetDimens.space15),
             child: IPetCustomIcon(
-              ip_size: 20,
+              ip_size: IPetDimens.space20,
               ip_font_ic: FontAwesomeIcons.list,
             ),
           ),
@@ -59,13 +60,13 @@ class IPetCustomBarWidget extends StatelessWidget
                 ip_font_ic: FontAwesomeIcons.search,
               ),
               IPetCustomSizedBox(
-                width: 15,
+                width: IPetDimens.space30,
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 15.0),
                 child: IPetCustomIcon(
                   ip_size: 20,
-                  ip_font_ic: FontAwesomeIcons.paw,
+                  ip_font_ic: FontAwesomeIcons.bell,
                 ),
               ),
             ],

@@ -5,7 +5,7 @@ class Label extends StatelessWidget {
   const Label({
     Key key,
     this.text,
-    this.textColor,
+    this.textColor = AppConst.kBlueBlackColor,
     this.size,
     this.fontWeight = FontWeight.w500,
     this.textAlign = TextAlign.left,

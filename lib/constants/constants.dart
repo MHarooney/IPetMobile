@@ -18,6 +18,7 @@ class AppConst {
   static const kTextColor = Color(0xFF757575);
   static const kTextDarkColor = Color(0xFF5D5D5D);
   static const kBlackColor = Color(0xFF000000);
+  static const kBlueBlackColor = Color(0xFF384163);
   static const nearlyBlack = Color(0xFF213333);
   static const kTextRareGoldColor = Color(0xFFF7D4C2);
   static const kTextLightRedColor = Color(0xFFFFE2E2);
