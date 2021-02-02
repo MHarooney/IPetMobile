@@ -66,7 +66,7 @@ class IPetCustomBarWidget extends StatelessWidget
                 padding: const EdgeInsets.only(right: 15.0),
                 child: IPetCustomIcon(
                   ip_size: 20,
-                  ip_font_ic: FontAwesomeIcons.paw,
+                  ip_font_ic: FontAwesomeIcons.bell,
                 ),
               ),
             ],

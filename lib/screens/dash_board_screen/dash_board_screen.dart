@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ipet/constants/constants.dart';
+import 'package:ipet/screens/dash_board_screen/components/custom_grid_view_card.dart';
 import 'package:ipet/widgets/common/ipet_custom_scaffold.dart';
-import 'package:ipet/widgets/custom_grid_view_card.dart';
 import 'package:ipet/widgets/ipet_custom_appbar.dart';
+import 'package:ipet/widgets/ipet_custom_sizedbox.dart';
+import 'package:ipet/widgets/label.dart';
 
 class DashBoardScreen extends StatelessWidget {
   @override
@@ -25,17 +28,20 @@ class DashBoardScreen extends StatelessWidget {
                 SizedBox(
                   height: 30,
                 ),
-                Text(
-                  "Hi, Mahmoud",
+                Label(
+                  text: "Hi, Mahmoud",
+                  size: 25,
+                  textColor: AppConst.kPrimaryColor,
                   // style: appTitle,
                 ),
-                SizedBox(
-                  height: 10,
+                IPetCustomSizedBox(
+                  height: 20,
                 ),
                 SizedBox(
                     width: size.width * 0.7,
-                    child: Text(
-                      "Check out the new products, groups, events, places and more!",
+                    child: Label(
+                      text:
+                          "Check out the new products, groups, events, places and more!",
                       // style: contentBlack,
                     )),
                 SizedBox(
@@ -48,13 +54,16 @@ class DashBoardScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text(
-                      "Walk groups".toUpperCase(),
-                      style: TextStyle(
-                        fontSize: 17,
-                      ),
+                    Label(
+                      text: "Walk groups".toUpperCase(),
+                      size: 17,
+                      fontWeight: FontWeight.bold,
                     ),
-                    Text("See All")
+                    Label(
+                      text: "Show more",
+                      textColor: AppConst.kPrimaryColor,
+                      size: 12,
+                    ),
                   ],
                 ),
                 SizedBox(
@@ -67,7 +76,7 @@ class DashBoardScreen extends StatelessWidget {
                       CustomGridViewCard(
                         imgScr: "assets/images/pet_places.png",
                         title: "Meet our lovely dogs walking with us",
-                        location: "Valencia, Spain",
+                        location: "Cairo, Egypt",
                         members: "8 memmbers",
                         orgBy: "Laura",
                       ),
