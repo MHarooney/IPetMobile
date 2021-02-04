@@ -23,6 +23,7 @@ class IPetNavHomeScreen extends StatelessWidget {
           right: 0,
           bottom: 0,
           child: IPetBottomNavBar(),
+          // child: IPetHomeScreen(),
         ),
       ],
     );
