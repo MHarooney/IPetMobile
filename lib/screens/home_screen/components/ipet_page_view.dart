@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ipet/models/notifiers/nav_b_bar/navigation_bbar_data.dart';
+import 'package:ipet/screens/account_screen/account_screen.dart';
 import 'package:ipet/screens/dash_board_screen/dash_board_screen.dart';
 import 'package:provider/provider.dart';
 
@@ -26,7 +27,8 @@ class IPetPageView extends StatelessWidget {
               body: Container(child: Center(child: Text("Categories Screen")))),
           Scaffold(body: Container(child: Center(child: Text("Third")))),
           Scaffold(body: Container(child: Center(child: Text("Fourth")))),
-          Scaffold(body: Container(child: Center(child: Text("Fifth")))),
+          // Scaffold(body: Container(child: Center(child: Text("Fifth")))),
+          AccountScreen(),
         ],
       );
     });
