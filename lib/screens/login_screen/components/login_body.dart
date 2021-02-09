@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ipet/constants/constants.dart';
 import 'package:ipet/constants/ipet_dimens.dart';
 import 'package:ipet/screens/home_screen/ipet_home_screen.dart';
+import 'package:ipet/size_config.dart';
 import 'package:ipet/widgets/country_picker/country_picker.dart';
 import 'package:ipet/widgets/default_image.dart';
 import 'package:ipet/widgets/ipet_custom_painter/ipet_sharp_divider/sharp_hor_divider.dart';
@@ -18,14 +19,14 @@ class LoginBody extends StatelessWidget {
     return SingleChildScrollView(
       child: SafeArea(
         child: IPetCustomSizedBox(
-          width: double.infinity,
+          width: getProportionateScreenWidth(double.infinity),
           iPetChild: Center(
             child: Column(
               children: <Widget>[
                 DefaultImage(
                   image: AppConst.kIPetPawIc,
-                  width: IPetDimens.space200,
-                  height: IPetDimens.space80,
+                  width: getProportionateScreenWidth(IPetDimens.space200),
+                  height: getProportionateScreenHeight(IPetDimens.space80),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -36,13 +37,13 @@ class LoginBody extends StatelessWidget {
                         text: AppConst.kLoginTo,
                         textColor: AppConst.kTextRareGoldColor,
                         fontWeight: FontWeight.bold,
-                        size: 20.0,
+                        size: IPetDimens.space20,
                       ),
                     ),
                     DefaultImage(
                       image: AppConst.kIPetTxtImg,
-                      width: IPetDimens.space120,
-                      height: IPetDimens.space50,
+                      width: getProportionateScreenWidth(IPetDimens.space120),
+                      height: getProportionateScreenHeight(IPetDimens.space50),
                     ),
                   ],
                 ),
@@ -111,8 +112,8 @@ class LoginBody extends StatelessWidget {
                       onTap: () {},
                       buttonTitle: AppConst.kLoginPhoneNoTxt,
                       colour: AppConst.kTextLightRedColor,
-                      height: IPetDimens.space50,
-                      width: IPetDimens.space50,
+                      height: getProportionateScreenHeight(IPetDimens.space50),
+                      width: getProportionateScreenWidth(IPetDimens.space50),
                       textColour: AppConst.kPrimaryWhiteBgColor,
                       myBorderRadius: BorderRadius.circular(
                         IPetDimens.space5,
@@ -165,8 +166,8 @@ class LoginBody extends StatelessWidget {
                       onTap: () {},
                       buttonTitle: AppConst.kLoginWithGoogleTxt,
                       colour: Colors.red,
-                      height: IPetDimens.space50,
-                      width: IPetDimens.space50,
+                      height: getProportionateScreenHeight(IPetDimens.space50),
+                      width: getProportionateScreenWidth(IPetDimens.space50),
                       textColour: AppConst.kPrimaryWhiteBgColor,
                       myBorderRadius: BorderRadius.circular(IPetDimens.space5),
                       iPetBoxShadow: [
@@ -179,8 +180,8 @@ class LoginBody extends StatelessWidget {
                       onTap: () {},
                       buttonTitle: AppConst.kLoginWithFaceBookTxt,
                       colour: Colors.blue,
-                      height: IPetDimens.space50,
-                      width: IPetDimens.space50,
+                      height: getProportionateScreenHeight(IPetDimens.space50),
+                      width: getProportionateScreenWidth(IPetDimens.space50),
                       textColour: AppConst.kPrimaryWhiteBgColor,
                       myBorderRadius: BorderRadius.circular(IPetDimens.space5),
                       iPetBoxShadow: [
@@ -194,13 +195,13 @@ class LoginBody extends StatelessWidget {
                       onTap: () {},
                       buttonTitle: AppConst.kLoginWithAppleTxt,
                       colour: AppConst.kPrimarySemiWhiteColor,
-                      height: IPetDimens.space50,
-                      width: IPetDimens.space50,
+                      height: getProportionateScreenHeight(IPetDimens.space50),
+                      width: getProportionateScreenWidth(IPetDimens.space50),
                       textColour: Colors.black,
                       myBorderRadius: BorderRadius.circular(IPetDimens.space5),
                       iPetBoxBorder: Border.all(
                         color: Colors.black,
-                        width: IPetDimens.space1,
+                        width: getProportionateScreenWidth(IPetDimens.space1),
                       ),
                       iPetBoxShadow: [
                         AppConst.iPetLoginBoxShadow(
@@ -216,8 +217,10 @@ class LoginBody extends StatelessWidget {
                         children: [
                           DefaultImage(
                             image: AppConst.kPrivacyAndPolicyTxtIc,
-                            height: IPetDimens.space32,
-                            width: IPetDimens.space32,
+                            height: getProportionateScreenHeight(
+                                IPetDimens.space32),
+                            width:
+                                getProportionateScreenWidth(IPetDimens.space32),
                           ),
                           Label(
                             textColor: AppConst.kBlackColor,

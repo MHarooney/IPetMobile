@@ -4,7 +4,7 @@ import 'package:ipet/constants/constants.dart';
 class Label extends StatelessWidget {
   const Label({
     Key key,
-    this.text,
+    @required this.text,
     this.textColor = AppConst.kBlueBlackColor,
     this.size,
     this.fontWeight = FontWeight.w500,
