@@ -1,5 +1,4 @@
 import 'package:flutter/widgets.dart';
-import 'package:ipet/screens/home_screen/ipet_home_screen.dart';
 import 'package:ipet/screens/intro_screen/intro_screen.dart';
 import 'package:ipet/screens/login_screen/login_screen.dart';
 
@@ -19,5 +18,4 @@ final Map<String, WidgetBuilder> routes = {
   SplashScreen.id: (context) => SplashScreen(),
   IntroScreen.id: (context) => IntroScreen(),
   IPetLoginScreen.id: (context) => IPetLoginScreen(),
-  IPetNavHomeScreen.id: (context) => IPetNavHomeScreen(),
 };

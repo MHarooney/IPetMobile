@@ -5,7 +5,7 @@ class IPetSharpDivider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
-      size: Size(200, 5),
+      size: Size(100, 5),
       painter: CurvePainter(),
     );
   }

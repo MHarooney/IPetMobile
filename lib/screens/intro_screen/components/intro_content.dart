@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ipet/constants/constants.dart';
-import 'package:ipet/size_config.dart';
 import 'package:ipet/widgets/label.dart';
 
 class IntroContent extends StatefulWidget {
@@ -33,8 +32,8 @@ class _IntroContentState extends State<IntroContent> {
         // Spacer(flex: 2),
         Image.asset(
           widget.image,
-          height: getProportionateScreenHeight(265),
-          width: getProportionateScreenWidth(235),
+          height: MediaQuery.of(context).size.height * 0.3,
+          width: MediaQuery.of(context).size.width * 0.8,
         ),
       ],
     );

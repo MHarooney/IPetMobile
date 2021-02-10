@@ -2,23 +2,26 @@ import 'package:flutter/material.dart';
 
 class IPetCustomScaffold extends StatelessWidget {
   final Widget body;
-  final PreferredSizeWidget iPetAppBar;
+  final PreferredSizeWidget iPetTopAppBar;
+  final PreferredSizeWidget iPetBottomAppBar;
   final Key ipKey;
 
   const IPetCustomScaffold({
     @required this.body,
     this.ipKey,
-    this.iPetAppBar,
+    this.iPetTopAppBar,
+    this.iPetBottomAppBar,
   });
 
   @override
   Scaffold build(BuildContext context) {
     return Scaffold(
       key: ipKey,
-      appBar: iPetAppBar,
+      appBar: iPetTopAppBar,
       body: SafeArea(
         child: body,
       ),
+      bottomNavigationBar: iPetBottomAppBar,
     );
   }
 }

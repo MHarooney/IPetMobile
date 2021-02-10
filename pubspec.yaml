@@ -41,8 +41,6 @@ dependencies:
   country_code_picker: ^1.7.0
 #https://pub.dev/packages/intl_phone_field
   intl_phone_field: ^1.4.2
-#https://pub.dev/packages/custom_navigation_bar
-  custom_navigation_bar: ^0.7.0
 #https://pub.dev/packages/font_awesome_flutter
   font_awesome_flutter: ^8.11.0
 
