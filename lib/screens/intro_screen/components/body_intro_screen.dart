@@ -19,18 +19,18 @@ class BodyIntroScreen extends StatelessWidget {
         width: double.infinity,
         iPetChild: Column(
           children: <Widget>[
-            IPetCustomSizedBox(
-              height: IPetDimens.space20,
-            ),
+            // IPetCustomSizedBox(
+            //   height: IPetDimens.space20,
+            // ),
             DefaultImage(
               image: AppConst.kIPetPawIc,
               width: IPetDimens.space200,
-              height: IPetDimens.space80,
+              height: MediaQuery.of(context).size.height * 0.1,
             ),
             DefaultImage(
               image: AppConst.kIPetTxtImg,
               width: 200,
-              height: 80,
+              height: MediaQuery.of(context).size.height * 0.1,
             ),
             Expanded(
               flex: 3,

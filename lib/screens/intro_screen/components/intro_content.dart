@@ -33,7 +33,7 @@ class _IntroContentState extends State<IntroContent> {
         // Spacer(flex: 2),
         Image.asset(
           widget.image,
-          height: getProportionateScreenHeight(265),
+          height: MediaQuery.of(context).size.height * 0.3,
           width: getProportionateScreenWidth(235),
         ),
       ],
