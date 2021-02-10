@@ -40,7 +40,7 @@ class IPetBottomCommonAppBar extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15),
                 child: Container(
                   color: Colors.black45,
-                  height: 50,
+                  height: 52,
                   child: TabBar(
                     indicatorColor: AppConst.kPrimaryColor,
                     labelColor: AppConst.kPrimaryWhiteBgColor,
