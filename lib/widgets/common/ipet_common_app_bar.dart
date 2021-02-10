@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:ipet/constants/constants.dart';
 import 'package:ipet/screens/account_screen/account_screen.dart';
 import 'package:ipet/screens/dash_board_screen/dash_board_screen.dart';
 
@@ -32,10 +33,12 @@ class IPetCommonAppBar extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(16),
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(50),
+                borderRadius: BorderRadius.circular(15),
                 child: Container(
-                  color: Colors.black54,
+                  color: Colors.black45,
+                  height: 50,
                   child: TabBar(
+                    indicatorColor: AppConst.kPrimaryColor,
                     tabs: [
                       Tab(
                         icon: FaIcon(
