@@ -16,7 +16,8 @@ class BodyIntroScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: IPetCustomSizedBox(
-        width: double.infinity,
+        width: MediaQuery.of(context).size.width * 1,
+        height: MediaQuery.of(context).size.height * 1,
         iPetChild: Column(
           children: <Widget>[
             // IPetCustomSizedBox(

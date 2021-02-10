@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../size_config.dart';
@@ -20,6 +21,7 @@ class AppConst {
   static const kTextDarkColor = Color(0xFF5D5D5D);
   static const kBlackColor = Color(0xFF000000);
   static const kBlueBlackColor = Color(0xFF384163);
+  static const kBlueColor = Color(0xFF3BA3EB);
   static const nearlyBlack = Color(0xFF213333);
   static const kTextRareGoldColor = Color(0xFFF7D4C2);
   static const kTextLightRedColor = Color(0xFFFFE2E2);
@@ -67,6 +69,7 @@ class AppConst {
   static const String kPrivacyAndPolicyTxtIc = "assets/images/privacy_ic.png";
   static const String kIPetPawIc = "assets/images/ipet_paw_img.png";
   static const String kIPetTxtImg = "assets/images/ipet_text_img.png";
+  static const String kFBImg = "assets/icons/fb-ic.png";
 
   final otpInputDecoration = InputDecoration(
     contentPadding:
@@ -104,4 +107,14 @@ class AppConst {
             blurRadius: 8,
             offset: Offset(3, 1))
       ]);
+
+  static double getIPetResponsiveHeight(BuildContext context) {
+    return MediaQuery.of(context).size.height -
+        MediaQuery.of(context).padding.top -
+        kToolbarHeight;
+  }
+
+  static double getIPetResponsiveWidth(BuildContext context) {
+    return MediaQuery.of(context).size.width;
+  }
 }
