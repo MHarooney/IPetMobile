@@ -9,6 +9,7 @@ import 'package:ipet/size_config.dart';
 import 'package:ipet/widgets/country_picker/country_picker.dart';
 import 'package:ipet/widgets/custom_circle_raw_material_btn.dart';
 import 'package:ipet/widgets/default_image.dart';
+import 'package:ipet/widgets/ipet_custom_icon.dart';
 import 'package:ipet/widgets/ipet_custom_painter/ipet_sharp_divider/sharp_hor_divider.dart';
 import 'package:ipet/widgets/ipet_custom_sizedbox.dart';
 import 'package:ipet/widgets/ipet_default_button.dart';
@@ -143,14 +144,10 @@ class LoginBody extends StatelessWidget {
                         child: IPetCustomCircleBtn(
                           constraintWidth: 56.0,
                           constraintHeight: 56.0,
-                          iPetShapeBorder: RoundedRectangleBorder(borderRadius:BorderRadius.circular(12.0) ),
+                          iPetShapeBorder: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12.0)),
                           iPetIconColor: Colors.white,
                           iPetFillColor: Colors.red,
-                          iPetBorderSide: BorderSide(
-                            width: 2,
-                            color: Colors.blueAccent,
-                            style: BorderStyle.solid,
-                          ),
                         ),
                       ),
                       IPetCustomSizedBox(height: IPetDimens.space10),
@@ -190,49 +187,57 @@ class LoginBody extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          IPetCustomCircleBtn(
-                            constraintWidth: 56.0,
-                            constraintHeight: 56.0,
-                            iPetShapeBorder: CircleBorder(),
-                            iconChild: FontAwesomeIcons.google,
-                            iPetIconColor: Colors.white,
-                            iPetFillColor: Colors.red,
-                            iPetBorderSide: BorderSide(
-                              width: 2,
-                              color: Colors.blueAccent,
-                              style: BorderStyle.solid,
+                      Container(
+                        height: constraints.maxHeight * 0.22,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            IPetCustomCircleBtn(
+                              constraintWidth: 56.0,
+                              constraintHeight: 56.0,
+                              iPetShapeBorder: CircleBorder(),
+                              iPetChildCard: IPetCustomIcon(
+                                ipFontIc: FontAwesomeIcons.google,
+                                colour: Colors.white,
+                              ),
+                              iPetIconColor: Colors.white,
+                              iPetFillColor: Colors.red,
                             ),
-                          ),
-                          IPetCustomCircleBtn(
-                            constraintWidth: 56.0,
-                            constraintHeight: 56.0,
-                            iPetShapeBorder: CircleBorder(),
-                            iconChild: FontAwesomeIcons.facebook,
-                            iPetIconColor: AppConst.kPrimaryWhiteBgColor,
-                            iPetFillColor: AppConst.kBlueColor,
-                            iPetBorderSide: BorderSide(
-                              width: 2,
-                              color: Colors.transparent,
-                              style: BorderStyle.solid,
+                            IPetCustomCircleBtn(
+                              constraintWidth: 56.0,
+                              constraintHeight: 56.0,
+                              iPetShapeBorder: CircleBorder(),
+                              iPetChildCard: IPetCustomIcon(
+                                ipFontIc: FontAwesomeIcons.facebook,
+                                colour: Colors.white,
+                              ),
+                              iPetIconColor: AppConst.kPrimaryWhiteBgColor,
+                              iPetFillColor: AppConst.kBlueColor,
                             ),
-                          ),
-                          IPetCustomCircleBtn(
-                            constraintWidth: 56.0,
-                            constraintHeight: 56.0,
-                            iPetShapeBorder: CircleBorder(),
-                            iconChild: FontAwesomeIcons.apple,
-                            iPetIconColor: Colors.black,
-                            iPetFillColor: Colors.white,
-                            iPetBorderSide: BorderSide(
-                              width: 2,
-                              color: Colors.black,
-                              style: BorderStyle.solid,
+                            IPetCustomCircleBtn(
+                              constraintWidth: 56.0,
+                              constraintHeight: 56.0,
+                              iPetShapeBorder: CircleBorder(
+                                side: BorderSide(
+                                  width: 2,
+                                  color: Colors.black,
+                                  style: BorderStyle.solid,
+                                ),
+                              ),
+                              iPetChildCard: IPetCustomIcon(
+                                ipFontIc: FontAwesomeIcons.apple,
+                                colour: Colors.black,
+                              ),
+                              iPetIconColor: Colors.black,
+                              iPetFillColor: Colors.white,
+                              // iPetBorderSide: BorderSide(
+                              //   width: 2,
+                              //   color: Colors.black,
+                              //   style: BorderStyle.solid,
+                              // ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                       IPetCustomSizedBox(height: IPetDimens.space20),
                       Padding(

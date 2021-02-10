@@ -52,8 +52,8 @@ class CustomGridViewCard extends StatelessWidget {
                     Row(
                       children: <Widget>[
                         IPetCustomIcon(
-                          ip_size: IPetDimens.space17,
-                          ip_font_ic: FontAwesomeIcons.mapMarkedAlt,
+                          ipSize: IPetDimens.space17,
+                          ipFontIc: FontAwesomeIcons.mapMarkedAlt,
                         ),
                         IPetCustomSizedBox(
                           width: IPetDimens.space15,

@@ -36,8 +36,8 @@ class IPetCustomBarWidget extends StatelessWidget
           Padding(
             padding: const EdgeInsets.only(left: IPetDimens.space15),
             child: IPetCustomIcon(
-              ip_size: iPetIconSize,
-              ip_font_ic: FontAwesomeIcons.list,
+              ipSize: iPetIconSize,
+              ipFontIc: FontAwesomeIcons.list,
             ),
           ),
           Expanded(
@@ -56,8 +56,8 @@ class IPetCustomBarWidget extends StatelessWidget
           Row(
             children: [
               IPetCustomIcon(
-                ip_size: 20,
-                ip_font_ic: FontAwesomeIcons.search,
+                ipSize: 20,
+                ipFontIc: FontAwesomeIcons.search,
               ),
               IPetCustomSizedBox(
                 width: IPetDimens.space30,
@@ -65,8 +65,8 @@ class IPetCustomBarWidget extends StatelessWidget
               Padding(
                 padding: const EdgeInsets.only(right: 15.0),
                 child: IPetCustomIcon(
-                  ip_size: 20,
-                  ip_font_ic: FontAwesomeIcons.bell,
+                  ipSize: 20,
+                  ipFontIc: FontAwesomeIcons.bell,
                 ),
               ),
             ],

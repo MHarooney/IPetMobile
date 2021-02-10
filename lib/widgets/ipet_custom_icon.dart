@@ -3,20 +3,20 @@ import 'package:ipet/constants/constants.dart';
 
 class IPetCustomIcon extends StatelessWidget {
   IPetCustomIcon({
-    @required this.ip_size,
-    @required this.ip_font_ic,
+    this.ipSize,
+    @required this.ipFontIc,
     this.colour = AppConst.kBlueBlackColor,
   });
 
-  final IconData ip_font_ic;
-  final double ip_size;
+  final IconData ipFontIc;
+  final double ipSize;
   final Color colour;
 
   @override
   Widget build(BuildContext context) {
     return Icon(
-      ip_font_ic,
-      size: ip_size,
+      ipFontIc,
+      size: ipSize,
       color: colour,
     );
   }
