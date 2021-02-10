@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ipet/constants/constants.dart';
 import 'package:ipet/constants/ipet_dimens.dart';
-import 'package:ipet/screens/home_screen/home_test.dart';
+import 'package:ipet/screens/home_screen/ipet_home_screen.dart';
 import 'package:ipet/size_config.dart';
 import 'package:ipet/widgets/country_picker/country_picker.dart';
 import 'package:ipet/widgets/default_image.dart';

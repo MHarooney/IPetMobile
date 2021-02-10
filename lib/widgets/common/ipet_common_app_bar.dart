@@ -4,8 +4,8 @@ import 'package:ipet/constants/constants.dart';
 import 'package:ipet/screens/account_screen/account_screen.dart';
 import 'package:ipet/screens/dash_board_screen/dash_board_screen.dart';
 
-class IPetCommonAppBar extends StatelessWidget {
-  const IPetCommonAppBar({
+class IPetBottomCommonAppBar extends StatelessWidget {
+  const IPetBottomCommonAppBar({
     Key key,
     TabController tabController,
   })  : _tabController = tabController,
