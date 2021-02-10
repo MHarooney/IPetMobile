@@ -15,6 +15,7 @@ class AppConst {
   //   colors: [Color(0xFF73C2FB), Color(0xFF00B6F0)],
   // );
   static const kSecondaryColor = Color(0xFF979797);
+  static const kGreyColor = Color(0xFFA9A9A9);
   static const kTextColor = Color(0xFF757575);
   static const kTextDarkColor = Color(0xFF5D5D5D);
   static const kBlackColor = Color(0xFF000000);

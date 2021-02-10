@@ -43,6 +43,8 @@ class IPetBottomCommonAppBar extends StatelessWidget {
                   height: 50,
                   child: TabBar(
                     indicatorColor: AppConst.kPrimaryColor,
+                    labelColor: AppConst.kPrimaryWhiteBgColor,
+                    unselectedLabelColor: AppConst.kGreyColor,
                     tabs: [
                       Tab(
                         icon: FaIcon(
