@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:ipet/screens/account_screen/account_screen.dart';
+import 'package:ipet/screens/dash_board_screen/dash_board_screen.dart';
 
 class IPetCommonAppBar extends StatelessWidget {
   const IPetCommonAppBar({
     Key key,
-    @required TabController tabController,
+    TabController tabController,
   })  : _tabController = tabController,
         super(key: key);
 
@@ -16,11 +19,11 @@ class IPetCommonAppBar extends StatelessWidget {
         children: [
           TabBarView(
             children: [
-              Container(color: Colors.red),
+              DashBoardScreen(),
               Container(color: Colors.green),
               Container(color: Colors.blue),
               Container(color: Colors.blue),
-              Container(color: Colors.blue),
+              AccountScreen(),
             ],
             controller: _tabController,
           ),
@@ -34,11 +37,31 @@ class IPetCommonAppBar extends StatelessWidget {
                   color: Colors.black54,
                   child: TabBar(
                     tabs: [
-                      Tab(icon: Icon(Icons.home)),
-                      Tab(icon: Icon(Icons.business)),
-                      Tab(icon: Icon(Icons.school)),
-                      Tab(icon: Icon(Icons.school)),
-                      Tab(icon: Icon(Icons.school)),
+                      Tab(
+                        icon: FaIcon(
+                          FontAwesomeIcons.paw,
+                        ),
+                      ),
+                      Tab(
+                        icon: FaIcon(
+                          FontAwesomeIcons.filter,
+                        ),
+                      ),
+                      Tab(
+                        icon: FaIcon(
+                          FontAwesomeIcons.heart,
+                        ),
+                      ),
+                      Tab(
+                        icon: FaIcon(
+                          FontAwesomeIcons.shoppingBasket,
+                        ),
+                      ),
+                      Tab(
+                        icon: FaIcon(
+                          FontAwesomeIcons.userAlt,
+                        ),
+                      ),
                     ],
                     controller: _tabController,
                   ),

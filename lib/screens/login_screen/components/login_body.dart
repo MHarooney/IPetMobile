@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ipet/constants/constants.dart';
 import 'package:ipet/constants/ipet_dimens.dart';
-import 'package:ipet/screens/home_screen/ipet_home_screen.dart';
+import 'package:ipet/screens/home_screen/home_test.dart';
 import 'package:ipet/size_config.dart';
 import 'package:ipet/widgets/country_picker/country_picker.dart';
 import 'package:ipet/widgets/default_image.dart';
@@ -10,8 +10,6 @@ import 'package:ipet/widgets/ipet_custom_sizedbox.dart';
 import 'package:ipet/widgets/ipet_default_button.dart';
 import 'package:ipet/widgets/label.dart';
 import 'package:ipet/widgets/my_custom_card.dart';
-
-import '../../home_screen/ipet_home_screen.dart';
 
 class LoginBody extends StatelessWidget {
   @override
@@ -243,8 +241,8 @@ class LoginBody extends StatelessWidget {
                             MaterialPageRoute(
                               builder: (BuildContext context) =>
                                   // IPetBNavigation(),
-                                  // IPetHomeScreen(),
-                                  IPetNavHomeScreen(),
+                                  IPetHomeScreen(),
+                              // IPetNavHomeScreen(),
                             ),
                           );
                           //   Navigator.pushReplacementNamed(context,

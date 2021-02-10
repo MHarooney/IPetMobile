@@ -8,19 +8,19 @@ import 'package:ipet/widgets/ipet_custom_sizedbox.dart';
 class IPetCustomBarWidget extends StatelessWidget
     implements PreferredSizeWidget {
   final String title;
-  final Widget child;
-  final Function onPressed;
-  final Function onTitleTapped;
+  final String iPetPawImage;
+  final double iPetIconSize;
+  final IconData iPetListIconData;
 
   @override
   final Size preferredSize;
 
-  IPetCustomBarWidget(
-      {@required this.title,
-      @required this.child,
-      @required this.onPressed,
-      this.onTitleTapped})
-      : preferredSize = Size.fromHeight(IPetDimens.space60);
+  IPetCustomBarWidget({
+    @required this.title,
+    this.iPetIconSize = IPetDimens.space20,
+    this.iPetListIconData,
+    this.iPetPawImage,
+  }) : preferredSize = Size.fromHeight(IPetDimens.space60);
 
   ShapeBorder kBackButtonShape = RoundedRectangleBorder(
     borderRadius: BorderRadius.only(
@@ -36,7 +36,7 @@ class IPetCustomBarWidget extends StatelessWidget
           Padding(
             padding: const EdgeInsets.only(left: IPetDimens.space15),
             child: IPetCustomIcon(
-              ip_size: IPetDimens.space20,
+              ip_size: iPetIconSize,
               ip_font_ic: FontAwesomeIcons.list,
             ),
           ),
