@@ -31,7 +31,7 @@ class IPetBottomCommonAppBar extends StatelessWidget {
           Align(
             alignment: Alignment.bottomCenter,
             child: Padding(
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.fromLTRB(16, 16, 16, 30),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(15),
                 child: Container(
