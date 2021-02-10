@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:ipet/models/notifiers/app_bar/ipet_bar_notifer.dart';
 import 'package:ipet/models/notifiers/intro_screen/intro_screen_data.dart';
 import 'package:ipet/models/notifiers/nav_b_bar/navigation_bbar_data.dart';
@@ -15,6 +16,9 @@ import 'screens/splash/splash_screen.dart';
 // import 'package:shop_app/screens/splash/splash_screen.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   runApp(MaterialApp(
     home: MyApp(),
   ));
