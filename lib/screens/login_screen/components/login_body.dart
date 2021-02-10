@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:ipet/constants/constants.dart';
 import 'package:ipet/constants/ipet_dimens.dart';
@@ -248,9 +250,14 @@ class LoginBody extends StatelessWidget {
                           //   Navigator.pushReplacementNamed(context,
                           //       IPetNavHomeScreen.id);
                         },
-                        child: Label(
-                          textColor: AppConst.kSecondaryColor,
-                          text: AppConst.kNotNowTxt,
+                        child: Container(
+                          margin: Platform.isAndroid
+                              ? EdgeInsets.only(bottom: 30)
+                              : null,
+                          child: Label(
+                            textColor: AppConst.kSecondaryColor,
+                            text: AppConst.kNotNowTxt,
+                          ),
                         ),
                       ),
                     ),
