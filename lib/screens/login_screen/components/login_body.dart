@@ -29,7 +29,8 @@ class LoginBody extends StatelessWidget {
                 children: <Widget>[
                   DefaultImage(
                     image: AppConst.kIPetPawIc,
-                    width: constraints.maxWidth * 0.2,
+                    // width: constraints.maxWidth * 0.2,
+                    width: MediaQuery.of(context).size.width * 0.3,
                     height: constraints.maxHeight * 0.1,
                   ),
                   Row(
@@ -137,6 +138,21 @@ class LoginBody extends StatelessWidget {
                           ),
                         ],
                       ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                        child: IPetCustomCircleBtn(
+                          constraintWidth: 56.0,
+                          constraintHeight: 56.0,
+                          iPetShapeBorder: RoundedRectangleBorder(borderRadius:BorderRadius.circular(12.0) ),
+                          iPetIconColor: Colors.white,
+                          iPetFillColor: Colors.red,
+                          iPetBorderSide: BorderSide(
+                            width: 2,
+                            color: Colors.blueAccent,
+                            style: BorderStyle.solid,
+                          ),
+                        ),
+                      ),
                       IPetCustomSizedBox(height: IPetDimens.space10),
                       Container(
                         margin: EdgeInsets.only(top: IPetDimens.space10),
@@ -178,16 +194,22 @@ class LoginBody extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           IPetCustomCircleBtn(
+                            constraintWidth: 56.0,
+                            constraintHeight: 56.0,
+                            iPetShapeBorder: CircleBorder(),
                             iconChild: FontAwesomeIcons.google,
                             iPetIconColor: Colors.white,
                             iPetFillColor: Colors.red,
                             iPetBorderSide: BorderSide(
                               width: 2,
-                              color: Colors.transparent,
+                              color: Colors.blueAccent,
                               style: BorderStyle.solid,
                             ),
                           ),
                           IPetCustomCircleBtn(
+                            constraintWidth: 56.0,
+                            constraintHeight: 56.0,
+                            iPetShapeBorder: CircleBorder(),
                             iconChild: FontAwesomeIcons.facebook,
                             iPetIconColor: AppConst.kPrimaryWhiteBgColor,
                             iPetFillColor: AppConst.kBlueColor,
@@ -198,6 +220,9 @@ class LoginBody extends StatelessWidget {
                             ),
                           ),
                           IPetCustomCircleBtn(
+                            constraintWidth: 56.0,
+                            constraintHeight: 56.0,
+                            iPetShapeBorder: CircleBorder(),
                             iconChild: FontAwesomeIcons.apple,
                             iPetIconColor: Colors.black,
                             iPetFillColor: Colors.white,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class IPetCustomCircleBtn extends StatelessWidget {
   IPetCustomCircleBtn({
@@ -8,6 +9,9 @@ class IPetCustomCircleBtn extends StatelessWidget {
     @required this.iPetIconColor,
     this.iPetChildCard,
     this.iPetBorderSide,
+    this.iPetShapeBorder,
+    this.constraintWidth,
+    this.constraintHeight,
   });
 
   final IconData iconChild;
@@ -16,6 +20,9 @@ class IPetCustomCircleBtn extends StatelessWidget {
   final Color iPetIconColor;
   final Widget iPetChildCard;
   final BorderSide iPetBorderSide;
+  final ShapeBorder iPetShapeBorder;
+  final double constraintWidth;
+  final double constraintHeight;
 
   @override
   Widget build(BuildContext context) {
@@ -27,12 +34,10 @@ class IPetCustomCircleBtn extends StatelessWidget {
       onPressed: onPressed,
       elevation: 6,
       constraints: BoxConstraints.tightFor(
-        width: 56.0,
-        height: 56.0,
+        width: constraintWidth,
+        height: constraintHeight,
       ),
-      shape: CircleBorder(
-        side: iPetBorderSide,
-      ),
+      shape: iPetShapeBorder,
       // shape: RoundedRectangleBorder(
       //   borderRadius: new BorderRadius.circular(30.0),
       // ),
