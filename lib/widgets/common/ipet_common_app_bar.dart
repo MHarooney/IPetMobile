@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ipet/constants/constants.dart';
@@ -31,7 +33,9 @@ class IPetBottomCommonAppBar extends StatelessWidget {
           Align(
             alignment: Alignment.bottomCenter,
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(16, 16, 16, 30),
+              padding: Platform.isAndroid
+                  ? EdgeInsets.all(16)
+                  : EdgeInsets.fromLTRB(16, 16, 16, 30),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(15),
                 child: Container(
