@@ -122,23 +122,6 @@ class LoginBody extends StatelessWidget {
                           size: IPetDimens.space12,
                         ),
                       ),
-                      // IPetDefaultButton(
-                      //   onTap: () {},
-                      //   buttonTitle: AppConst.kLoginPhoneNoTxt,
-                      //   colour: AppConst.kTextLightRedColor,
-                      //   height: MediaQuery.of(context).size.height * 0.06,
-                      //   width: getProportionateScreenWidth(IPetDimens.space50),
-                      //   textColour: AppConst.kPrimaryWhiteBgColor,
-                      //   myBorderRadius: BorderRadius.circular(
-                      //     IPetDimens.space5,
-                      //   ),
-                      //   iPetBoxShadow: [
-                      //     AppConst.iPetLoginBoxShadow(
-                      //       btnColor: AppConst.kTextLightRedColor
-                      //           .withOpacity(0.6), // changes position of shadow
-                      //     ),
-                      //   ],
-                      // ),
                       Padding(
                         padding: const EdgeInsets.fromLTRB(15, 20, 15, 0),
                         child: Container(
