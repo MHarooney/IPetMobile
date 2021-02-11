@@ -222,29 +222,24 @@ class LoginBody extends StatelessWidget {
                               iPetIconColor: AppConst.kPrimaryWhiteBgColor,
                               iPetFillColor: AppConst.kBlueColor,
                             ),
-                            Platform.isIOS
-                                ? IPetCustomCircleBtn(
-                                    constraintWidth:
-                                        constraints.maxWidth * 0.13,
-                                    constraintHeight:
-                                        constraints.maxHeight * 0.13,
-                                    iPetShapeBorder: CircleBorder(
-                                      side: BorderSide(
-                                        width: 2,
-                                        color: Colors.black,
-                                        style: BorderStyle.solid,
-                                      ),
-                                    ),
-                                    iPetChildCard: IPetCustomIcon(
-                                      ipFontIc: FontAwesomeIcons.apple,
-                                      colour: Colors.black,
-                                    ),
-                                    iPetIconColor: Colors.black,
-                                    iPetFillColor: Colors.white,
-                                  )
-                                : SizedBox(
-                                    width: 0,
-                                  )
+                            if (Platform.isIOS)
+                              IPetCustomCircleBtn(
+                                constraintWidth: constraints.maxWidth * 0.13,
+                                constraintHeight: constraints.maxHeight * 0.13,
+                                iPetShapeBorder: CircleBorder(
+                                  side: BorderSide(
+                                    width: 2,
+                                    color: Colors.black,
+                                    style: BorderStyle.solid,
+                                  ),
+                                ),
+                                iPetChildCard: IPetCustomIcon(
+                                  ipFontIc: FontAwesomeIcons.apple,
+                                  colour: Colors.black,
+                                ),
+                                iPetIconColor: Colors.black,
+                                iPetFillColor: Colors.white,
+                              ),
                           ],
                         ),
                       ),
