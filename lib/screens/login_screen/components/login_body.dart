@@ -242,7 +242,9 @@ class LoginBody extends StatelessWidget {
                                     iPetIconColor: Colors.black,
                                     iPetFillColor: Colors.white,
                                   )
-                                : SizedBox()
+                                : SizedBox(
+                                    width: 0,
+                                  )
                           ],
                         ),
                       ),
