@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:ipet/constants/constants.dart';
+import 'package:ipet/constants/ipet_dimens.dart';
 import 'package:ipet/screens/dash_board_screen/components/custom_grid_view_card.dart';
 import 'package:ipet/widgets/common/ipet_custom_scaffold.dart';
+import 'package:ipet/widgets/default_image.dart';
 import 'package:ipet/widgets/ipet_custom_appbar.dart';
+import 'package:ipet/widgets/ipet_custom_icon.dart';
 import 'package:ipet/widgets/ipet_custom_sizedbox.dart';
 import 'package:ipet/widgets/label.dart';
 
@@ -11,7 +14,21 @@ class DashBoardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return IPetCustomScaffold(
-      iPetTopAppBar: IPetCustomTopBarWidget(),
+      iPetTopAppBar: IPetCustomTopBarWidget(
+        iPetFirstPart: IPetCustomIcon(
+          ipSize: IPetDimens.space20,
+          ipFontIc: Icons.arrow_back_ios,
+        ),
+        iPetMiddlePart: [
+          DefaultImage(
+            image: 'assets/images/ipet_paw_img.png',
+          ),
+          Label(
+            text: 'Settings',
+          ),
+        ],
+        iPetLastPart: [],
+      ),
       body: ListView(
         children: <Widget>[
           Padding(
