@@ -1,24 +1,37 @@
 import 'package:flutter/material.dart';
-import 'package:ipet/screens/setting_screen/components/bott_nav_bar_content.dart';
+import 'package:ipet/constants/ipet_dimens.dart';
+import 'package:ipet/widgets/common/ipet_custom_scaffold.dart';
+import 'package:ipet/widgets/default_image.dart';
+import 'package:ipet/widgets/ipet_custom_appbar.dart';
+import 'package:ipet/widgets/ipet_custom_icon.dart';
+import 'package:ipet/widgets/label.dart';
 
 import '../../constants/constants.dart';
-import '../../widgets/label.dart';
 import 'components/setting_body.dart';
 
 class SettingScreen extends StatelessWidget {
   static String id = 'SettingScreen';
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Colors.grey[100],
-        appBar: AppBar(
-            backgroundColor: AppConst.kPrimaryColor,
-            leading: IconButton(icon: Icon(Icons.arrow_back_ios),
-                onPressed: (){Navigator.pop(context);}),
-            title: Label(text: 'Settings',textColor: AppConst.kPrimaryWhiteBgColor,)
+    return IPetCustomScaffold(
+      iPetBGScaffoldColor: AppConst.kPrimaryWhiteBgColor,
+      iPetTopAppBar: IPetCustomTopBarWidget(
+        iPetMiddlePart: [
+          DefaultImage(
+            image: 'assets/images/ipet_paw_img.png',
+          ),
+          Label(
+            text: 'Settings',
+          )
+        ],
+        iPetFirstPart: IPetCustomIcon(
+          ipSize: IPetDimens.space20,
+          ipFontIc: Icons.arrow_back_ios,
         ),
-        body: SettingBody(),
-        bottomNavigationBar: BottNavBarContent()
+        iPetLastPart: [],
+      ),
+      body: SettingBody(),
     );
   }
 }
