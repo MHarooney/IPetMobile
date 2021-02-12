@@ -23,7 +23,7 @@ class SettingScreen extends StatelessWidget {
           ),
           Label(
             text: 'Settings',
-          )
+          ),
         ],
         iPetFirstPart: IPetCustomIcon(
           ipSize: IPetDimens.space20,
