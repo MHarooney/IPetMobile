@@ -222,7 +222,7 @@ class LoginBody extends StatelessWidget {
                                 ),
                                 iPetIconColor: Colors.black,
                                 iPetFillColor: Colors.white,
-                              ),
+                              )
                           ],
                         ),
                       ),

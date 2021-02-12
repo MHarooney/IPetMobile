@@ -5,9 +5,8 @@ import 'package:ipet/widgets/default_image.dart';
 import 'package:ipet/widgets/ipet_custom_icon.dart';
 import 'package:ipet/widgets/ipet_custom_sizedbox.dart';
 
-class IPetCustomBarWidget extends StatelessWidget
+class IPetCustomTopBarWidget extends StatelessWidget
     implements PreferredSizeWidget {
-  final String title;
   final String iPetPawImage;
   final double iPetIconSize;
   final IconData iPetListIconData;
@@ -15,8 +14,7 @@ class IPetCustomBarWidget extends StatelessWidget
   @override
   final Size preferredSize;
 
-  IPetCustomBarWidget({
-    @required this.title,
+  IPetCustomTopBarWidget({
     this.iPetIconSize = IPetDimens.space20,
     this.iPetListIconData,
     this.iPetPawImage,

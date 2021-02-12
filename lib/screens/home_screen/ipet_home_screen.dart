@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ipet/widgets/common/ipet_common_app_bar.dart';
+import 'package:ipet/widgets/common/ipet_bottom_app_bar.dart';
 
 class IPetHomeScreen extends StatefulWidget {
   static String id = 'IPetHomeScreen';

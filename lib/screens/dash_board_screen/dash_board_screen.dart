@@ -11,11 +11,8 @@ class DashBoardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return IPetCustomScaffold(
-      iPetTopAppBar: IPetCustomBarWidget(
-        title: "IPet",
-      ),
-      body: SafeArea(
-          child: ListView(
+      iPetTopAppBar: IPetCustomTopBarWidget(),
+      body: ListView(
         children: <Widget>[
           Padding(
             padding:
@@ -72,7 +69,7 @@ class DashBoardScreen extends StatelessWidget {
                   child: Row(
                     children: <Widget>[
                       CustomGridViewCard(
-                        imgScr: "assets/images/pet_places.png",
+                        imgScr: "assets/images/dog-img.jpg",
                         title: "Meet our lovely dogs walking with us",
                         location: "Cairo, Egypt",
                         members: "8 memmbers",
@@ -130,7 +127,7 @@ class DashBoardScreen extends StatelessWidget {
             ),
           ),
         ],
-      )),
+      ),
     );
   }
 }

@@ -32,7 +32,8 @@ class CustomGridViewCard extends StatelessWidget {
         ipetDecoration: AppConst.greyBoxShadow,
         childCard: MyCustomCard(
           colour: null,
-          ipetWidth: IPetDimens.space280,
+          ipetWidth: MediaQuery.of(context).size.width * 0.6,
+          ipetHeight: MediaQuery.of(context).size.height * 0.33,
           childCard: Column(
             children: <Widget>[
               DefaultImage(image: imgScr),
