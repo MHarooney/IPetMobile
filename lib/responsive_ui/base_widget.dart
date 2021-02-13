@@ -3,9 +3,10 @@ import 'package:ipet/responsive_ui/sizing_information.dart';
 
 import '../utils/ui_utils.dart';
 
-class BaseWidget extends StatelessWidget {
-  final Widget Function(BuildContext context) builder;
-  const BaseWidget({Key key, this.builder}) : super(key: key);
+class ResponsiveBuilder extends StatelessWidget {
+  final Widget Function(
+      BuildContext context, SizingInformation sizingInformation) builder;
+  const ResponsiveBuilder({Key key, this.builder}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,13 +14,12 @@ class BaseWidget extends StatelessWidget {
 
     return LayoutBuilder(builder: (context, boxConstraints) {
       var sizingInformation = SizingInformation(
-        orientation: mediaQuery.orientation,
         deviceScreenType: getDeviceType(mediaQuery),
         screenSize: mediaQuery.size,
         localWidgetSize:
             Size(boxConstraints.maxWidth, boxConstraints.maxHeight),
       );
-      return builder(context);
+      return builder(context, sizingInformation);
     });
   }
 }

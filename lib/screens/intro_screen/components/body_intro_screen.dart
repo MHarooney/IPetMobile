@@ -15,8 +15,12 @@ import 'package:provider/provider.dart';
 class BodyIntroScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return BaseWidget(
-      builder: (context) => SafeArea(
+    return ResponsiveBuilder(
+      builder: (
+        context,
+        sizingInformation,
+      ) =>
+          SafeArea(
         child: IPetCustomSizedBox(
           iPetChild: Column(
             children: <Widget>[

@@ -18,8 +18,12 @@ class IntroContent extends StatefulWidget {
 class _IntroContentState extends State<IntroContent> {
   @override
   Widget build(BuildContext context) {
-    return BaseWidget(
-      builder: (context) => Column(
+    return ResponsiveBuilder(
+      builder: (
+        context,
+        sizingInformation,
+      ) =>
+          Column(
         children: <Widget>[
           Spacer(),
           Label(
