@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:ipet/ui/sizing_information.dart';
+import 'package:ipet/responsive_ui/sizing_information.dart';
 
 import '../utils/ui_utils.dart';
 
 class BaseWidget extends StatelessWidget {
-  final Widget Function(
-      BuildContext context, SizingInformation sizingInformation) builder;
+  final Widget Function(BuildContext context) builder;
   const BaseWidget({Key key, this.builder}) : super(key: key);
 
   @override
@@ -20,7 +19,7 @@ class BaseWidget extends StatelessWidget {
         localWidgetSize:
             Size(boxConstraints.maxWidth, boxConstraints.maxHeight),
       );
-      return builder(context, sizingInformation);
+      return builder(context);
     });
   }
 }
