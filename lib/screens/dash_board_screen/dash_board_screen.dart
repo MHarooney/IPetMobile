@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ipet/constants/constants.dart';
-import 'package:ipet/constants/ipet_dimens.dart';
 import 'package:ipet/screens/dash_board_screen/components/custom_grid_view_card.dart';
 import 'package:ipet/widgets/common/ipet_custom_scaffold.dart';
 import 'package:ipet/widgets/default_image.dart';
@@ -8,16 +8,27 @@ import 'package:ipet/widgets/ipet_custom_appbar.dart';
 import 'package:ipet/widgets/ipet_custom_icon.dart';
 import 'package:ipet/widgets/ipet_custom_sizedbox.dart';
 import 'package:ipet/widgets/label.dart';
+import 'package:ipet/widgets/my_custom_card.dart';
 
-class DashBoardScreen extends StatelessWidget {
+class DashBoardScreen extends StatefulWidget {
+  @override
+  _DashBoardScreenState createState() => _DashBoardScreenState();
+}
+
+class _DashBoardScreenState extends State<DashBoardScreen> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return IPetCustomScaffold(
+      ipKey: _scaffoldKey,
       iPetTopAppBar: IPetCustomTopBarWidget(
-        iPetFirstPart: IPetCustomIcon(
-          ipSize: IPetDimens.space20,
-          ipFontIc: Icons.arrow_back_ios,
+        iPetFirstPart: MyCustomCard(
+          colour: Colors.transparent,
+          childCard: IPetCustomIcon(ipFontIc: FontAwesomeIcons.list),
+          myOnTap: () {
+            _scaffoldKey.currentState.openDrawer();
+          },
         ),
         iPetMiddlePart: [
           DefaultImage(
@@ -29,6 +40,54 @@ class DashBoardScreen extends StatelessWidget {
         ],
         iPetLastPart: [],
       ),
+      // iPetTopAppBar: AppBar(),
+      iPetDrawer: Drawer(
+        // Add a ListView to the drawer. This ensures the user can scroll
+        // through the options in the drawer if there isn't enough ver tical
+        // space to fit everything.
+        child: ListView(
+          // Important: Remove any padding from the ListView.
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Text('Drawer Header'),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+            ),
+            ListTile(
+              title: Text('Item 1'),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('Item 2'),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+      ),
+      // iPetTopAppBar: IPetCustomTopBarWidget(
+      //   iPetMiddlePart: [
+      //     DefaultImage(
+      //       image: 'assets/images/ipet_paw_img.png',
+      //     ),
+      //     Label(
+      //       text: 'DashBoard',
+      //       textColor: AppConst.kPrimaryColor,
+      //     ),
+      //   ],
+      //   iPetLastPart: [],
+      // ),
       body: ListView(
         children: <Widget>[
           Padding(

@@ -7,14 +7,17 @@ class IPetCustomScaffold extends StatelessWidget {
   final PreferredSizeWidget iPetBottomAppBar;
   final Key ipKey;
   final Color iPetBGScaffoldColor;
+  final Widget iPetDrawer;
+  final Widget iPetFAB;
 
-  const IPetCustomScaffold({
-    @required this.body,
-    this.ipKey,
-    @required this.iPetTopAppBar,
-    this.iPetBottomAppBar,
-    this.iPetBGScaffoldColor = AppConst.kPrimaryWhiteBgColor,
-  });
+  const IPetCustomScaffold(
+      {@required this.body,
+      this.ipKey,
+      @required this.iPetTopAppBar,
+      this.iPetBottomAppBar,
+      this.iPetBGScaffoldColor = AppConst.kPrimaryWhiteBgColor,
+      this.iPetDrawer,
+      this.iPetFAB});
 
   @override
   Scaffold build(BuildContext context) {
@@ -26,6 +29,8 @@ class IPetCustomScaffold extends StatelessWidget {
         child: body,
       ),
       bottomNavigationBar: iPetBottomAppBar,
+      drawer: iPetDrawer,
+      floatingActionButton: iPetFAB,
     );
   }
 }
