@@ -1,4 +1,3 @@
-import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:ipet/models/notifiers/app_bar/ipet_bar_notifer.dart';
 import 'package:ipet/models/notifiers/intro_screen/intro_screen_data.dart';
@@ -16,8 +15,11 @@ import 'screens/splash/splash_screen.dart';
 // import 'package:shop_app/screens/splash/splash_screen.dart';
 
 void main() {
+  // runApp(
+  //   DevicePreview(builder: (context) => MaterialApp(home: MyApp())),
+  // );
   runApp(
-    DevicePreview(builder: (context) => MaterialApp(home: MyApp())),
+    MaterialApp(home: MyApp()),
   );
 }
 
