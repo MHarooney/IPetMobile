@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:ipet/models/notifiers/app_bar/ipet_bar_notifer.dart';
 import 'package:ipet/models/notifiers/intro_screen/intro_screen_data.dart';
@@ -20,7 +21,7 @@ void main() {
   //     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 
   runApp(
-    MaterialApp(home: MyApp()),
+    DevicePreview(builder: (context) => MaterialApp(home: MyApp())),
   );
 }
 
