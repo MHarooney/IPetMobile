@@ -112,7 +112,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                   child: Row(
                     children: <Widget>[
                       CustomGridViewCard(
-                        imgScr: "assets/images/dog-img.jpg",
+                        imgScr: "assets/images/lolo_dog.png",
                         title: "Meet our lovely dogs walking with us",
                         location: "Cairo, Egypt",
                         members: "8 memmbers",

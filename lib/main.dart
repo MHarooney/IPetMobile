@@ -18,7 +18,9 @@ void main() {
   // WidgetsFlutterBinding.ensureInitialized();
   // SystemChrome.setPreferredOrientations(
   //     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
-
+  // runApp(
+  //   DevicePreview(builder: (context) => MaterialApp(home: MyApp())),
+  // );
   runApp(
     MaterialApp(home: MyApp()),
   );

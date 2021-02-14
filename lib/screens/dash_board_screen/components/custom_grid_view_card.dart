@@ -24,33 +24,40 @@ class CustomGridViewCard extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(
-          right: IPetDimens.space30, bottom: IPetDimens.space30),
-      child: MyCustomCard(
-        colour: null,
-        ipetDecoration: AppConst.greyBoxShadow,
-        childCard: MyCustomCard(
-          colour: null,
-          ipetWidth: MediaQuery.of(context).size.width * 0.55,
-          ipetHeight: MediaQuery.of(context).size.height * 0.38,
-          childCard: Column(
-            children: <Widget>[
-              DefaultImage(image: imgScr),
-              Padding(
-                padding: EdgeInsets.all(IPetDimens.space15),
-                child: Column(
-                  children: <Widget>[
-                    Label(
+    return MyCustomCard(
+      ipetDecoration: AppConst.greyBoxShadow,
+      colour: null,
+      ipetWidth: MediaQuery.of(context).size.width * 0.60,
+      ipetHeight: MediaQuery.of(context).size.height * 0.40,
+      childCard: LayoutBuilder(
+        builder: (context, constraints) => Column(
+          children: <Widget>[
+            Container(
+              height: constraints.maxHeight * 0.45,
+              child: DefaultImage(
+                image: imgScr,
+                width: double.infinity,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    height: constraints.maxHeight * 0.15,
+                    child: Label(
                       text: title,
                       size: IPetDimens.space15,
                       fontWeight: FontWeight.bold,
                       height: IPetDimens.space1Point5,
                     ),
-                    IPetCustomSizedBox(
-                      height: IPetDimens.space10,
-                    ),
-                    Row(
+                  ),
+                  IPetCustomSizedBox(
+                    height: constraints.maxHeight * 0.05,
+                  ),
+                  Container(
+                    height: constraints.maxHeight * 0.10,
+                    child: Row(
                       children: <Widget>[
                         IPetCustomIcon(
                           ipSize: IPetDimens.space17,
@@ -65,10 +72,10 @@ class CustomGridViewCard extends StatelessWidget {
                         ),
                       ],
                     ),
-                    IPetCustomSizedBox(
-                      height: IPetDimens.space10,
-                    ),
-                    Row(
+                  ),
+                  Container(
+                    height: constraints.maxHeight * 0.10,
+                    child: Row(
                       children: <Widget>[
                         Icon(
                           FontAwesomeIcons.users,
@@ -83,10 +90,10 @@ class CustomGridViewCard extends StatelessWidget {
                         )
                       ],
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Row(
+                  ),
+                  Container(
+                    height: constraints.maxHeight * 0.10,
+                    child: Row(
                       children: <Widget>[
                         Icon(
                           Icons.account_circle,
@@ -95,28 +102,19 @@ class CustomGridViewCard extends StatelessWidget {
                         SizedBox(
                           width: 15,
                         ),
-                        RichText(
-                          text: TextSpan(text: "Organized by ",
-                              // style: contentBlack,
-                              children: <TextSpan>[
-                                TextSpan(
-                                  text: orgBy,
-                                  style:
-                                      TextStyle(color: AppConst.kPrimaryColor),
-                                ),
-                              ]),
-                        )
+                        Label(
+                          textColor: AppConst.kPrimaryColor,
+                          text: orgBy,
+                        ),
+
                         // Text("Organized by Laura ",style: contentBlack,)
                       ],
                     ),
-                    SizedBox(
-                      height: 10,
-                    )
-                  ],
-                ),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
