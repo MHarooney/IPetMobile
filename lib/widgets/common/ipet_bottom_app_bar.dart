@@ -6,7 +6,8 @@ import 'package:ipet/constants/constants.dart';
 import 'package:ipet/ui_screens/account_screen/account_screen.dart';
 import 'package:ipet/ui_screens/dash_board_screen/dash_board_screen.dart';
 
-class IPetBottomCommonAppBar extends StatelessWidget {
+class IPetBottomCommonAppBar extends StatelessWidget
+    implements PreferredSizeWidget {
   const IPetBottomCommonAppBar({
     Key key,
     TabController tabController,
@@ -82,4 +83,8 @@ class IPetBottomCommonAppBar extends StatelessWidget {
       ),
     );
   }
+
+  @override
+  // TODO: implement preferredSize
+  Size get preferredSize => throw UnimplementedError();
 }

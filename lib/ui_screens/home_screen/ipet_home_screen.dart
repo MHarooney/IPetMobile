@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ipet/widgets/common/ipet_bottom_app_bar.dart';
+import 'package:ipet/widgets/common/ipet_custom_scaffold.dart';
 
 class IPetHomeScreen extends StatefulWidget {
   static String id = 'IPetHomeScreen';
@@ -27,6 +28,8 @@ class _IPetHomeScreenState extends State<IPetHomeScreen>
 
   @override
   Widget build(BuildContext context) {
-    return IPetBottomCommonAppBar(tabController: _tabController);
+    return IPetCustomScaffold(
+      iPetBottomAppBar: IPetBottomCommonAppBar(tabController: _tabController),
+    );
   }
 }

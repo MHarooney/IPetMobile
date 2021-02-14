@@ -30,93 +30,89 @@ class CustomGridViewCard extends StatelessWidget {
       child: MyCustomCard(
         colour: null,
         ipetDecoration: AppConst.greyBoxShadow,
-        childCard: MyCustomCard(
-          colour: null,
-          ipetWidth: MediaQuery.of(context).size.width * 0.6,
-          ipetHeight: MediaQuery.of(context).size.height * 0.4,
-          childCard: Column(
-            children: <Widget>[
-              DefaultImage(image: imgScr),
-              Padding(
-                padding: EdgeInsets.all(IPetDimens.space15),
-                child: Column(
-                  children: <Widget>[
-                    Label(
-                      text: title,
-                      size: IPetDimens.space15,
-                      fontWeight: FontWeight.bold,
-                      height: IPetDimens.space1Point5,
-                    ),
-                    IPetCustomSizedBox(
-                      height: IPetDimens.space10,
-                    ),
-                    Row(
-                      children: <Widget>[
-                        IPetCustomIcon(
-                          ipSize: IPetDimens.space17,
-                          ipFontIc: FontAwesomeIcons.mapMarkedAlt,
-                        ),
-                        IPetCustomSizedBox(
-                          width: IPetDimens.space15,
-                        ),
-                        Label(
-                          text: location,
-                          // style: contentBlack,
-                        ),
-                      ],
-                    ),
-                    IPetCustomSizedBox(
-                      height: IPetDimens.space10,
-                    ),
-                    Row(
-                      children: <Widget>[
-                        Icon(
-                          FontAwesomeIcons.users,
-                          size: 17,
-                        ),
-                        IPetCustomSizedBox(
-                          width: IPetDimens.space10,
-                        ),
-                        Text(
-                          members,
-                          // style: contentBlack,
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Row(
-                      children: <Widget>[
-                        Icon(
-                          Icons.account_circle,
-                          size: 20,
-                        ),
-                        SizedBox(
-                          width: 15,
-                        ),
-                        RichText(
-                          text: TextSpan(text: "Organized by ",
-                              // style: contentBlack,
-                              children: <TextSpan>[
-                                TextSpan(
-                                  text: orgBy,
-                                  style:
-                                      TextStyle(color: AppConst.kPrimaryColor),
-                                ),
-                              ]),
-                        )
-                        // Text("Organized by Laura ",style: contentBlack,)
-                      ],
-                    ),
-                    SizedBox(
-                      height: 10,
-                    )
-                  ],
-                ),
+        ipetWidth: MediaQuery.of(context).size.width * 0.2,
+        ipetHeight: MediaQuery.of(context).size.height * 0.2,
+        childCard: Column(
+          children: <Widget>[
+            DefaultImage(image: imgScr),
+            Padding(
+              padding: EdgeInsets.all(IPetDimens.space15),
+              child: Column(
+                children: <Widget>[
+                  Label(
+                    text: title,
+                    size: IPetDimens.space15,
+                    fontWeight: FontWeight.bold,
+                    height: IPetDimens.space1Point5,
+                  ),
+                  IPetCustomSizedBox(
+                    height: IPetDimens.space10,
+                  ),
+                  Row(
+                    children: <Widget>[
+                      IPetCustomIcon(
+                        ipSize: IPetDimens.space17,
+                        ipFontIc: FontAwesomeIcons.mapMarkedAlt,
+                      ),
+                      IPetCustomSizedBox(
+                        width: IPetDimens.space15,
+                      ),
+                      Label(
+                        text: location,
+                        // style: contentBlack,
+                      ),
+                    ],
+                  ),
+                  IPetCustomSizedBox(
+                    height: IPetDimens.space10,
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Icon(
+                        FontAwesomeIcons.users,
+                        size: 17,
+                      ),
+                      IPetCustomSizedBox(
+                        width: IPetDimens.space10,
+                      ),
+                      Text(
+                        members,
+                        // style: contentBlack,
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Icon(
+                        Icons.account_circle,
+                        size: 20,
+                      ),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      RichText(
+                        text: TextSpan(text: "Organized by ",
+                            // style: contentBlack,
+                            children: <TextSpan>[
+                              TextSpan(
+                                text: orgBy,
+                                style: TextStyle(color: AppConst.kPrimaryColor),
+                              ),
+                            ]),
+                      )
+                      // Text("Organized by Laura ",style: contentBlack,)
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  )
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
