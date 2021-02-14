@@ -33,7 +33,7 @@ class CustomGridViewCard extends StatelessWidget {
         builder: (context, constraints) => Column(
           children: <Widget>[
             Container(
-              height: constraints.maxHeight * 0.45,
+              height: constraints.maxHeight * 0.50,
               child: DefaultImage(
                 image: imgScr,
                 width: double.infinity,
