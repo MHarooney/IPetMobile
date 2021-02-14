@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ipet/constants/constants.dart';
-import 'package:ipet/screens/splash/components/body.dart';
 import 'package:ipet/size_config.dart';
+import 'package:ipet/ui_screens/splash/components/body.dart';
 import 'package:ipet/widgets/common/ipet_custom_scaffold.dart';
 
 class SplashScreen extends StatelessWidget {

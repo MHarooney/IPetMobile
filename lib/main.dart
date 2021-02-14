@@ -3,12 +3,10 @@ import 'package:ipet/models/notifiers/app_bar/ipet_bar_notifer.dart';
 import 'package:ipet/models/notifiers/intro_screen/intro_screen_data.dart';
 import 'package:ipet/models/notifiers/nav_b_bar/navigation_bbar_data.dart';
 import 'package:ipet/routes.dart';
-import 'package:ipet/screens/splash/splash_screen.dart';
 import 'package:ipet/theme.dart';
+import 'package:ipet/ui_screens/intro_screen/intro_screen.dart';
+import 'package:ipet/ui_screens/splash/splash_screen.dart';
 import 'package:provider/provider.dart';
-
-import 'screens/intro_screen/intro_screen.dart';
-import 'screens/splash/splash_screen.dart';
 
 // import 'package:shop_app/routes.dart';
 // import 'package:shop_app/screens/profile/profile_screen.dart';

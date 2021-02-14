@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ipet/constants/constants.dart';
-import 'package:ipet/screens/dash_board_screen/components/custom_grid_view_card.dart';
+import 'package:ipet/ui_screens/dash_board_screen/components/custom_grid_view_card.dart';
 import 'package:ipet/widgets/common/ipet_custom_scaffold.dart';
 import 'package:ipet/widgets/default_image.dart';
 import 'package:ipet/widgets/ipet_custom_appbar.dart';

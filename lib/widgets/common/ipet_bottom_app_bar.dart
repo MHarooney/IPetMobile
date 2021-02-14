@@ -3,8 +3,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ipet/constants/constants.dart';
-import 'package:ipet/screens/account_screen/account_screen.dart';
-import 'package:ipet/screens/dash_board_screen/dash_board_screen.dart';
+import 'package:ipet/ui_screens/account_screen/account_screen.dart';
+import 'package:ipet/ui_screens/dash_board_screen/dash_board_screen.dart';
 
 class IPetBottomCommonAppBar extends StatelessWidget {
   const IPetBottomCommonAppBar({

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ipet/screens/intro_screen/components/body_intro_screen.dart';
 import 'package:ipet/size_config.dart';
+import 'package:ipet/ui_screens/intro_screen/components/body_intro_screen.dart';
 
 class IntroScreen extends StatelessWidget {
   // static String routeName = "/splash";

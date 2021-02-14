@@ -1,10 +1,7 @@
 import 'package:flutter/widgets.dart';
-import 'package:ipet/screens/intro_screen/intro_screen.dart';
-import 'package:ipet/screens/login_screen/login_screen.dart';
-
-import 'screens/intro_screen/intro_screen.dart';
-import 'screens/login_screen/login_screen.dart';
-import 'screens/splash/splash_screen.dart';
+import 'package:ipet/ui_screens/intro_screen/intro_screen.dart';
+import 'package:ipet/ui_screens/login_screen/login_screen.dart';
+import 'package:ipet/ui_screens/splash/splash_screen.dart';
 
 // All our routes will be available here
 final Map<String, WidgetBuilder> routes = {
