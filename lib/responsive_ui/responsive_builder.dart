@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:ipet/ui/sizing_information.dart';
+import 'package:ipet/responsive_ui/sizing_information.dart';
+import 'package:ipet/utils/ui_utils.dart';
 
-import '../utils/ui_utils.dart';
-
-class BaseWidget extends StatelessWidget {
+class ResponsiveBuilder extends StatelessWidget {
   final Widget Function(
-      BuildContext context, SizingInformation sizingInformation) builder;
-  const BaseWidget({Key key, this.builder}) : super(key: key);
+    BuildContext context,
+    SizingInformation sizingInformation,
+  ) builder;
+  const ResponsiveBuilder({Key key, this.builder}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    var mediaQuery = MediaQuery.of(context);
-
     return LayoutBuilder(builder: (context, boxConstraints) {
+      var mediaQuery = MediaQuery.of(context);
       var sizingInformation = SizingInformation(
-        orientation: mediaQuery.orientation,
         deviceScreenType: getDeviceType(mediaQuery),
         screenSize: mediaQuery.size,
         localWidgetSize:

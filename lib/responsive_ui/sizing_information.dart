@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:ipet/enums.dart';
+import 'package:ipet/enums/enums.dart';
 
 class SizingInformation {
-  final Orientation orientation;
   final DeviceScreenType deviceScreenType;
   final Size screenSize;
   final Size localWidgetSize;
 
   SizingInformation({
-    this.orientation,
     this.deviceScreenType,
     this.screenSize,
     this.localWidgetSize,
@@ -16,6 +14,6 @@ class SizingInformation {
 
   @override
   String toString() {
-    return 'Orientation:$orientation DeviceType:$deviceScreenType ScreenSize:$screenSize LocalWidgetSize:$localWidgetSize';
+    return 'DeviceType:$deviceScreenType ScreenSize:$screenSize LocalWidgetSize:$localWidgetSize';
   }
 }
